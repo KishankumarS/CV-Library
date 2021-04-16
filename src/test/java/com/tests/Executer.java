@@ -5,11 +5,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.SeleRepository.SeleFun;
 import com.driver.Driverclass;
 import com.repository.CommonObjects;
 
 public class Executer {
+	
 	WebDriver driver;
 	CommonObjects com;
 	@BeforeClass
@@ -26,16 +26,12 @@ public class Executer {
 	}
 	
 	@DataProvider(name = "datakeyword")
-	public Object[][] datakeyword() {
-		
-		return new Object[][] { { outs() }, };
-		
+	public Object[] datakeyword() {
+		 Object data[]= new Object[3];
+	      data[0]= "Make";
+	      data[1]= "Selenium";
+	      data[2]= "Easy";
+	      return data;
 	}
-	private String[] outs() {
-	    String[] result = new String[2];
-	    result[0] = "Selenium";
-	    result[1] = "Java developer";
-	    
-	    return result;
-	}
+	
 }
